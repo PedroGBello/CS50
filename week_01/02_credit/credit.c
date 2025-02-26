@@ -26,10 +26,12 @@
     4. If the total’s last digit is 0, the number is valid!
 */
 
+#include <math.h>
 #include <stdio.h>
 #include <stdbool.h>
 
 int cc_length(long int cc_number);
+int check_cc_type(long int cc_number, int length);
 bool check_cc_validity(long int cc_number);
 
 int main(void)
@@ -37,12 +39,10 @@ int main(void)
     // Prompt user for credit card number (without spaces or dashes).
     long int cc_number;
     
-    printf("Enter credit card number: ");
+    printf("Enter credit card number without dashes or spaces: ");
     scanf("%ld", &cc_number);
     int length = cc_length(cc_number);
-    bool is_valid = check_cc_validity(cc_number);
-
-    is_valid ? printf("Card %ld is valid!\n", cc_number) : printf("INVALID\n");
+    check_cc_type(cc_number, length);
 
     return 0;
 }
@@ -84,4 +84,34 @@ bool check_cc_validity(long int cc_number)
         cc_number /= 10;
     }
     return (sum % 10 == 0);
+}
+
+int check_cc_type(long int cc_number, int length)
+{
+    bool is_valid = check_cc_validity(cc_number);
+    if (is_valid)
+    {
+        // Get the first digit of the credit card number.
+        int prefix_1 = cc_number / (long long) pow(10, length - 1);
+        // Get the first two digits of the credit card number.
+        int prefix_2 = cc_number / (long long) pow(10, length - 2);
+
+        if ((prefix_2 == 34 || prefix_2 == 37) && length == 15)
+        {
+            printf("AMEX\n");
+            return 0;
+        }
+        if ((prefix_2 >= 51 && prefix_2 <= 55) && length == 16)
+        {
+            printf("MASTERCARD\n");
+            return 0;
+        }
+        if ((prefix_1 == 4) && (length == 13 || length == 16))
+        {
+            printf("VISA\n");
+            return 0;
+        }
+    }
+    printf("INVALID\n");
+    return 0;
 }
