@@ -3,14 +3,12 @@
     Programming in C
     WEEK 1 - Problem Set: Credit
     --------------------------------
+    
+    This program prompts the user for a credit card number and then reports (via `printf`) whether it is a valid American Express, MasterCard, or Visa card number, according to the definitions of each’s format.
 
-        The `credit` program determines whether a provided credit card number is valid according to Luhn’s algorithm.
-
-    The program prompts the user for a credit card number and then reports (via `printf`) whether it is a valid American Express, MasterCard, or Visa card number, according to the definitions of each’s format.
-
-    American Express uses 15-digit numbers, starting with 34 or 37.
-    MasterCard uses 16-digit numbers, starting with 51, 52, 53, 54, or 55.
-    Visa uses 13- and 16-digit numbers, starting with 4.
+    1. American Express uses 15-digit numbers, starting with 34 or 37.
+    2. MasterCard uses 16-digit numbers, starting with 51-55.
+    3. Visa uses 13- and 16-digit numbers, starting with 4.
 
     The program’s output should be exactly as follows:
     
@@ -18,12 +16,6 @@
     - `MASTERCARD\n` for a MasterCard
     - `VISA\n` for a Visa card
     - `INVALID\n` for an invalid card
-
-    Luhn’s Algorithm:
-    1. Multiply every other digit by 2, starting with the number’s second-to-last digit.
-    2. Add those products' digits together.
-    3. Add the sum to the sum of the digits that weren’t multiplied by 2.
-    4. If the total’s last digit is 0, the number is valid!
 */
 
 #include <math.h>
