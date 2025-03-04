@@ -1,3 +1,7 @@
+/*
+    The `print_pyramid` function takes an integer `height` as an argument and prints a pyramid pattern of that height to the console, with each level consisting of left-aligned and right-aligned bricks separated by two spaces.
+*/
+
 #include <ctype.h>
 #include <stdio.h>
 
@@ -45,9 +49,6 @@ void print_spaces(const int spaces)
 
 void print_pyramid(const int height)
 {
-    /*
-        The `print_pyramid` function takes an integer `height` as an argument and prints a pyramid pattern of that height to the console, with each level consisting of left-aligned and right-aligned bricks separated by two spaces.
-    */
     for (int i = 0; i < height; i++)
     {
         print_spaces(height - i - 1);
