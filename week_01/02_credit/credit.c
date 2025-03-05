@@ -1,23 +1,3 @@
-/*
-    CS50x - Intro to Computer Science
-    Programming in C
-    WEEK 1 - Problem Set: Credit
-    --------------------------------
-    
-    This program prompts the user for a credit card number and then reports (via `printf`) whether it is a valid American Express, MasterCard, or Visa card number, according to the definitions of each’s format.
-
-    1. American Express uses 15-digit numbers, starting with 34 or 37.
-    2. MasterCard uses 16-digit numbers, starting with 51-55.
-    3. Visa uses 13- and 16-digit numbers, starting with 4.
-
-    The program’s output should be exactly as follows:
-    
-    - `AMEX\n` for an American Express card
-    - `MASTERCARD\n` for a MasterCard
-    - `VISA\n` for a Visa card
-    - `INVALID\n` for an invalid card
-*/
-
 #include <math.h>
 #include <stdio.h>
 #include <stdbool.h>
@@ -28,18 +8,18 @@ bool check_cc_validity(long int cc_number);
 
 int main(void)
 {
-    // Prompt user for credit card number (without spaces or dashes).
-    long int cc_number;
+    long int cc_number = 0;
     
-    printf("Enter credit card number without dashes or spaces: ");
+    printf("Enter credit card number (without dashes or spaces): ");
     scanf("%ld", &cc_number);
+
     int length = cc_length(cc_number);
     check_cc_type(cc_number, length);
 
     return 0;
 }
 
-// Credit card length:
+// Check the length of the credit card number and return the number of digits.
 int cc_length(long int cc_number)
 {
     int length = 0;
@@ -51,10 +31,11 @@ int cc_length(long int cc_number)
     return length;
 }
 
-// Credit card type:
+// Check if the credit card number is valid using the Luhn algorithm.
+// The algorithm doubles every second digit from the right, subtracts 9 if the result is greater than 9,
+// and sums all the digits. If the total modulo 10 is 0, the number is valid.
 bool check_cc_validity(long int cc_number)
 {
-    // Check if the credit card number is valid.
     int sum = 0;
     int removed_digit = 0;
 
@@ -78,6 +59,8 @@ bool check_cc_validity(long int cc_number)
     return (sum % 10 == 0);
 }
 
+// Check the type of the credit card based on its number and length.
+// Returns 0 if the card is AMEX, MASTERCARD, or VISA, otherwise returns 1.
 int check_cc_type(long int cc_number, int length)
 {
     bool is_valid = check_cc_validity(cc_number);
@@ -85,6 +68,7 @@ int check_cc_type(long int cc_number, int length)
     {
         // Get the first digit of the credit card number.
         int prefix_1 = cc_number / (long long) pow(10, length - 1);
+
         // Get the first two digits of the credit card number.
         int prefix_2 = cc_number / (long long) pow(10, length - 2);
 
@@ -105,5 +89,5 @@ int check_cc_type(long int cc_number, int length)
         }
     }
     printf("INVALID\n");
-    return 0;
+    return 1;
 }
