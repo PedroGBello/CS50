@@ -1,19 +1,22 @@
-# Week 01: Mario
-
-## Table of Contents
-
--   [Overview](#overview)
--   [Objectives](#objectives)
--   [Requirements](#requirements)
--   [Instructions](#instructions)
--   [Submission](#submission)
--   [Resources](#resources)
+# Week 01 | Task 01: "Mario"
 
 ## Overview
 
-<!-- Provide a brief description of the Mario project for CS50 Week 01. -->
+Toward the beginning of World 1-1 in Nintendo’s Super Mario Brothers, Mario encounters various obstacles, including pyramids of blocks that he must jump over. This project involves implementing a program in C, named `mario.c`, that recreates these pyramids using hashes (`#`) to represent the bricks.
 
-Toward the beginning of World 1-1 in Nintendo’s Super Mario Brothers, Mario must hop over adjacent pyramids of blocks. In a file called `mario.c`, implement a program in C that recreates that pyramid, using hashes (`#`) for bricks, as in the below:
+### Introduction
+
+The goal of this program is to prompt the user for a positive integer between 1 and 8, inclusive, which determines the height of the pyramids. The program will then generate a visual representation of the pyramids with the specified height, ensuring that the pyramids are properly aligned and separated by a gap of two spaces.
+
+### Functionality
+
+The `print_pyramid` function is the core of this program. It takes an integer `height` as an argument and prints a pyramid pattern of that height to the console, with level consisting of left-aligned and right-aligned bricks, separated by two spaces. The width of the gap between the pyramids remains constant, regardless of the height.
+
+### Error Handling
+
+The program includes error handling to ensure that the user inputs a valid height. If the user enters a value outside the range of 1 to 8, the program will repeatedly prompt the user until a valid input is provided. This ensures that the program operates correctly and generates the desired pyramid pattern.
+
+### Example Output
 
 ```
    #  #
@@ -22,42 +25,7 @@ Toward the beginning of World 1-1 in Nintendo’s Super Mario Brothers, Mario mu
 ####  ####
 ```
 
-And let’s allow the user to decide just how tall the pyramids should be by first prompting them for a positive `int` between, say, 1 and 8, inclusive.
-Here’s how the program might work if the user inputs `8` when prompted:
-
-```
-$ ./mario
-Height: 8
-       #  #
-      ##  ##
-     ###  ###
-    ####  ####
-   #####  #####
-  ######  ######
- #######  #######
-########  ########
-
-```
-
-Notice that width of the “gap” between adjacent pyramids is equal to the width of two hashes, irrespective of the pyramids’ heights.
-
-## Objectives
-
--   Understand the basics of loops and conditionals in C.
--   Implement a simple program using these concepts.
-
-## Requirements
-
--   In a file called `mario.c`, implement a program in C that prints a pyramid, using hashes (`#`) for bricks.,
--   The pyramid should be right-aligned.
-
-## Instructions
-
-1. Prompt the user for the height of the pyramid.
-   1.1. If the user doesn't input a positive integer between 1 and 8, inclusive, the program should re-prompt the user until he/she cooperates.
-   1.2. Make sure the program doesn't allow characters.
-2. Use loops to print the pyramid with the specified height.
-3. Ensure the pyramid is right-aligned.
+This example demonstrates a pyramid of height 4, with each level properly aligned and separated by a gap.
 
 ## Resources
 
