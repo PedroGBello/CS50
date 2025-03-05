@@ -1,7 +1,3 @@
-/*
-    The `print_pyramid` function takes an integer `height` as an argument and prints a pyramid pattern of that height to the console, with each level consisting of left-aligned and right-aligned bricks separated by two spaces.
-*/
-
 #include <ctype.h>
 #include <stdio.h>
 
@@ -15,20 +11,23 @@ int main(void)
     return 0;
 }
 
+// Prompt user for a height between 1 and 8
 int get_height(void)
 {
     int height;
     do
     {
-        printf("Please, input an integer between 1 and 8: ");
+        printf("Please enter an integer between 1 and 8: ");
         scanf("%d", &height);
     }
-    // Missing check for non-integer input
+    // Check if the height is between 1 and 8 inclusive
+    // ! Missing integer validation (e.g. if the user enters a character)
     while (height < 1 || height > 8);
 
     return height;
 }
 
+// Print a row of bricks
 void print_rows(const int bricks)
 {
     for (int i = 0; i < bricks; i++)
@@ -37,16 +36,16 @@ void print_rows(const int bricks)
     }
 }
 
+// Print spaces
 void print_spaces(const int spaces)
 {
     for (int i = 0; i < spaces; i++)
     {
         printf(" ");
     }
-    // // Formatted output instead of a loop:
-    // printf("%*s", spaces, "");
 }
 
+// Print a pyramid
 void print_pyramid(const int height)
 {
     for (int i = 0; i < height; i++)
