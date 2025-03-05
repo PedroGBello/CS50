@@ -17,11 +17,11 @@ In this lesson, you learned how to apply the building blocks you learned in Scra
 -   How to integrate comments into your code.
 -   How to utilize types and operators and the implications of your choices.
 
-### Task 01: "Mario"
+### [Task 01: "Mario"](https://github.com/PedroGBello/CS50/tree/main/week_01/01_mario)
 
 This program prints a pyramid of 1 to 8 bricks.
 
-### Task 02: "Credit"
+### [Task 02: "Credit"](https://github.com/PedroGBello/CS50/tree/main/week_01/02_credit)
 
 This program checks if a credit card is valid.
 
