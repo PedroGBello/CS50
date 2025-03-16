@@ -27,10 +27,9 @@ int main(int argc, char *argv[])
 
     for (int i = 0; i < LENGTH; i++)
     {
-        printf("%i\n", arr[i]);
+        printf("%i ", arr[i]);
     }
     printf("\n");
-
     return 0;
 }
 

@@ -17,13 +17,11 @@ In this lesson, you learned how to apply the building blocks you learned in Scra
 -   How to integrate comments into your code.
 -   How to utilize types and operators and the implications of your choices.
 
-### Task 01: "Mario"
+### Task list:
 
-This program prints a pyramid of 1 to 8 bricks.
+**[Task 01: "Mario"](https://github.com/PedroGBello/CS50/tree/main/week_01/01_mario)** — This program prints a pyramid of 1 to 8 bricks.
 
-### Task 02: "Credit"
-
-This program checks if a credit card is valid.
+**[Task 02: "Credit"](https://github.com/PedroGBello/CS50/tree/main/week_01/02_credit)** — This program checks if a credit card is valid.
 
 ## Week 02: "Arrays"
 
@@ -51,3 +49,7 @@ In this lesson, you learned about algorithmic thinking and building your own dat
 -   Binary search and linear search.
 -   Various sort algorithms, including bubble sort, selection sort, and merge sort.
 -   Recursion.
+
+### Task list:
+
+**[Task 01: "Search and Sort"](https://github.com/PedroGBello/CS50/tree/main/week_03/01_search_and_sort)** — These programs search and sort integers.
