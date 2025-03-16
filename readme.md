@@ -53,3 +53,7 @@ In this lesson, you learned about algorithmic thinking and building your own dat
 ### Task list:
 
 **[Task 01: "Search and Sort"](https://github.com/PedroGBello/CS50/tree/main/week_03/01_search_and_sort)** — These programs search and sort integers.
+
+**[Task 02: "Plurality"](https://github.com/PedroGBello/CS50/tree/main/week_03/02_plurality)** — This program simulates a plurality vote election, tallying votes for candidates and determining the winner.
+
+**[Task 03: "Runoff"](https://github.com/PedroGBello/CS50/tree/main/week_03/03_runoff)** — This program simulates an instant runoff election, where voters rank candidates and the winner is determined through elimination rounds until one has over 50% of the votes.
