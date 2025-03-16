@@ -5,6 +5,13 @@
 		"string_view": "c",
 		"unordered_map": "c",
 		"vector": "c",
-		"string.h": "c"
-	}
+		"string.h": "c",
+		"__locale": "c",
+		"math.h": "c",
+		"cstdlib": "c",
+		"locale": "c",
+		"new": "c",
+		"ostream": "c"
+	},
+	"C_Cpp.errorSquiggles": "disabled"
 }

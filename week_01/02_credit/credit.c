@@ -4,7 +4,7 @@
 
 int cc_length(long int cc_number);
 int check_cc_type(long int cc_number, int length);
-bool check_cc_validity(long int cc_number);
+bool is_cc_valid(long int cc_number);
 
 int main(void)
 {
@@ -34,7 +34,7 @@ int cc_length(long int cc_number)
 // Check if the credit card number is valid using the Luhn algorithm.
 // The algorithm doubles every second digit from the right, subtracts 9 if the result is greater than 9,
 // and sums all the digits. If the total modulo 10 is 0, the number is valid.
-bool check_cc_validity(long int cc_number)
+bool is_cc_valid(long int cc_number)
 {
     int sum = 0;
     int removed_digit = 0;
@@ -63,7 +63,7 @@ bool check_cc_validity(long int cc_number)
 // Returns 0 if the card is AMEX, MASTERCARD, or VISA, otherwise returns 1.
 int check_cc_type(long int cc_number, int length)
 {
-    bool is_valid = check_cc_validity(cc_number);
+    bool is_valid = is_cc_valid(cc_number);
     if (is_valid)
     {
         // Get the first digit of the credit card number.

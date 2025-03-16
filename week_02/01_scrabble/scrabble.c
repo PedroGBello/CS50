@@ -2,20 +2,21 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 int scrabble(char *word);
 
 int main(void)
 {
-    // No puedo declarar un array vacío.
-    char *input_1;
-    char *input_2;
+    // Get input from players. Allocate memory for input.
+    char *input_1 = malloc(20);
+    char *input_2 = malloc(20);
 
     printf("Player 1: ");
-    scanf("%s", &input_1);
+    scanf("%s", input_1);
 
     printf("Player 2: ");
-    scanf("%s", &input_2);
+    scanf("%s", input_2);
 
     // Check who's got more points.
     int player1_score = scrabble(input_1);
@@ -33,6 +34,11 @@ int main(void)
     {
         printf("Tie!\n");
     }
+
+    free(input_1);
+    free(input_2);
+
+    return 0;
 }
 
 int scrabble(char *word)
