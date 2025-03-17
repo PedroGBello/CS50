@@ -57,3 +57,30 @@ In this lesson, you learned about algorithmic thinking and building your own dat
 **[Task 02: "Plurality"](https://github.com/PedroGBello/CS50/tree/main/week_03/02_plurality)** — This program simulates a plurality vote election, tallying votes for candidates and determining the winner.
 
 **[Task 03: "Runoff"](https://github.com/PedroGBello/CS50/tree/main/week_03/03_runoff)** — This program simulates an instant runoff election, where voters rank candidates and the winner is determined through elimination rounds until one has over 50% of the votes.
+
+## Week 04: "Memory"
+
+Pointers. Segmentation Faults. Dynamic Memory Allocation. Stack. Heap. Buffer Overflow. File I/O. Images.
+
+In this lesson, you learned about pointers that provide you with the ability to access and manipulate data at specific memory locations. Specifically, we delved into…
+
+-   Pixel art
+-   Hexadecimal
+-   Memory
+-   Pointers
+-   Strings
+-   Pointer Arithmetic
+-   String Comparison
+-   Copying
+-   malloc and Valgrind
+-   Garbage values
+-   Swapping
+-   Overflow
+-   scanf
+-   File I/O
+
+### Task list:
+
+**[Task 01: "Volume"](https://github.com/PedroGBello/CS50/tree/main/week_04/01_volume)** — This program adjusts the volume of a WAV file by scaling audio samples.
+
+**[Task 02: "Filter (Less Comfortable)"](https://github.com/PedroGBello/CS50/tree/main/week_04/02_filter-less)** — This program reads an input BMP file, applies a filter, and writes the output to a new BMP file.
