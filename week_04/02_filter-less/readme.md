@@ -6,6 +6,7 @@ This project involves implementing a program in C, named `filter.c`, that applie
 
 > [!NOTE]
 > For this problem, I extended the functionality of code provided by CS50’s staff, working on the four functions in `helpers.c`.
+> Besides, there's an `images` folder provided by the CS50's staff to test this program.
 
 ### Introduction
 

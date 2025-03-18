@@ -84,3 +84,5 @@ In this lesson, you learned about pointers that provide you with the ability to 
 **[Task 01: "Volume"](https://github.com/PedroGBello/CS50/tree/main/week_04/01_volume)** — This program adjusts the volume of a WAV file by scaling audio samples.
 
 **[Task 02: "Filter (Less Comfortable)"](https://github.com/PedroGBello/CS50/tree/main/week_04/02_filter-less)** — This program reads an input BMP file, applies a filter, and writes the output to a new BMP file.
+
+**[Task 03: "Recover"](https://github.com/PedroGBello/CS50/tree/main/week_04/03_recover)** — This program reads a forensic image file, identifies JPEG headers, and recovers JPEGs by writing them to separate files.

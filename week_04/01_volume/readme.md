@@ -4,6 +4,9 @@
 
 This project involves implementing a program in C, named `volume.c`, that adjusts the volume of an audio file in the WAV format. The program reads an input WAV file, applies a scaling factor to the audio samples, and writes the adjusted audio to an output WAV file.
 
+> [!NOTE]
+> There're two audio files, `coldplay_trouble_01.mp3` and `coldplay_trouble_01.wav`, provided to test this program.
+
 ### Introduction
 
 The goal of this program is to prompt the user for an input WAV file, an output WAV file, and a scaling factor. The program will then read the audio data from the input file, adjust the volume by multiplying each audio sample by the scaling factor, and write the adjusted audio data to the output file.
